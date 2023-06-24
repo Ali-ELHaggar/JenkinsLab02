@@ -1,29 +1,30 @@
 pipeline {
-     agent any
-    }
+    agent any
 
     stages {
-         stage("prepare") {
+        stage("prepare") {
             steps {
-                echo" preparing your code"
+                echo "preparing your code"
+            }
         }
+        
         stage('check') {
             steps {
                 echo "checking your code"
-               
             }
         }
 
         stage('test') {
-          echo "testing your code your code"  
+            steps {
+                echo "testing your code"
+            }
         }
         
-        stage('deployment') {  
+        stage('deployment') {
             steps {
                 echo "your code is deployed right now"
                 echo "this build number $BUILD_NUMBER"
             }
-        }    
+        }
     }
-
 }
