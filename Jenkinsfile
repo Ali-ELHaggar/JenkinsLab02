@@ -3,6 +3,16 @@ pipeline {
     }
 
     stages {
+         stage("Clone Git Repository") {
+            steps {
+                git(
+                    url: "https://github.com/ssbostan/neptune.git",
+                    branch: "master",
+                    changelog: true,
+                    poll: true
+                )
+            }
+        }
         stage('check') {
             steps {
                 echo "checking your code"
