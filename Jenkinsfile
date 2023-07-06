@@ -1,3 +1,3 @@
-@Library('lab03.groovy@1.0') _
+@Library('github.com/Ali-ELHaggar/jenkins_Task03-shared-Liberary@main') _
 
-lab03.groovy()
+lab03()
